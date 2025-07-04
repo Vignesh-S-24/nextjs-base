@@ -17,6 +17,8 @@ import {
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import SettingsIcon from '@mui/icons-material/Settings';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+
 
 const drawerWidth = 240;
 
@@ -26,11 +28,12 @@ const Sidebar = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
-  const menuItems = [
-    { label: 'Dashboard', icon: <DashboardIcon />, path: '/dashboard' },
-    { label: 'Reports', icon: <BarChartIcon />, path: '/reports' },
-    { label: 'Settings', icon: <SettingsIcon />, path: '/settings' },
-  ];
+const menuItems = [
+  { label: 'Dashboard', icon: <DashboardIcon />, path: '/dashboard' },
+  { label: 'Reports', icon: <BarChartIcon />, path: '/reports' },
+  { label: 'Settings', icon: <SettingsIcon />, path: '/settings' },
+  { label: 'Profile', icon: <AccountCircleIcon />, path: '/profile' },
+];
 
   const handleNavigate = (path: string) => {
     if (pathname !== path) router.push(path);
